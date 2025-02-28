@@ -71,6 +71,31 @@ module.exports = {
             }
         }
         
+        // 8-ball feature
+        if (userMessage.startsWith('8ball')) {
+            const responses = [
+                'Yes!', 'No.', 'Maybe...', 'Ask again later.', 'Definitely!', 'I wouldn’t count on it.', 'Most likely!', 'I have no idea.'
+            ];
+            const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+            return message.reply(`🎱 ${randomResponse}`);
+        }
+        
+        // Dice roll feature
+        if (userMessage.startsWith('roll dice')) {
+            const diceRoll = Math.floor(Math.random() * 6) + 1;
+            return message.reply(`🎲 You rolled a ${diceRoll}!`);
+        }
+        
+        // Compliments feature
+        const compliments = [
+            "You're doing great!", "You're awesome!", "You're a fantastic human being!", "Keep up the great work!", "You're inspiring!"
+        ];
+        
+        if (userMessage.includes('give me a compliment')) {
+            const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
+            return message.reply(randomCompliment);
+        }
+        
         // Catch-all response for unknown messages
         if (Math.random() > 0.9) { // 10% chance to reply to random messages
             const randomReplies = [
