@@ -7,6 +7,10 @@
         "start": "node index.js",
         "deploy-commands": "node deploy-commands.js"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jouw-username/raimon-bot.git"
+    },
     "keywords": [],
     "author": "You",
     "license": "ISC",
