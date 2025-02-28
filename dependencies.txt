@@ -1,3 +1,0 @@
-discord.js
-dotenv
-natural
